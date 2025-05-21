@@ -1,0 +1,15 @@
+services:
+  cs:
+    build: .
+    environment:
+      MAP: "de_nuke"
+    ports:
+      - 27015:27015/tcp
+      - 27015:27015/udp
+      - 27020:27020/udp
+      - 27005:27005/udp
+      - 26900:26900/udp
+    volumes:
+      - ./cstrike/cfg:/cs/cstrike/cfg
+      - ./cstrike/maps:/cs/cstrike/maps
+
